@@ -10,7 +10,7 @@ import java.util.List;
  * Class for implementing the architecture of the MVP
  * for communicating with SimpleClockActivity
  * @author Yaroslav P.
- * */
+ */
 public class ClockPresenter {
 
     private SimpleClockView simpleClockView;
@@ -22,16 +22,16 @@ public class ClockPresenter {
 
     /**
      * Method for communicating with SimpleClockActivity through the interface SimpleClockView
-     * @param simpleClockView
-     * */
-    public void attachView(SimpleClockView simpleClockView){
+     * @param simpleClockView value for communicating with SimpleClockActivity
+     */
+    public void attachView(SimpleClockView simpleClockView) {
         this.simpleClockView = simpleClockView;
     }
 
     /**
      * This is a method for creating new fragments and installed on PagerAdapter
-     * */
-    public void loadData(){
+     */
+    public void loadData() {
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> titleList = new ArrayList<>();
 

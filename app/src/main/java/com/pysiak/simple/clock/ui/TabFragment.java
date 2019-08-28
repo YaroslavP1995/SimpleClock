@@ -11,14 +11,9 @@ import com.pysiak.simple.clock.R;
  * Fragment class
  * @author Yaroslav P.
  * {@link Fragment}
- * */
+ */
 public class TabFragment extends Fragment {
 
-    /**
-     * Method for create view my Fragments
-     * @see Fragment#onCreateView(LayoutInflater, ViewGroup, Bundle)
-     * @return inflater with resource layout_one
-     * */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.layout_one,container,false);

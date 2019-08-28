@@ -12,10 +12,8 @@ import com.pysiak.simple.clock.R;
 import java.util.List;
 
 /**
- * Main class, launcher activity for application, implementation of SimpleClockView
+ * Main class, launcher activity for application, implementation of {@link SimpleClockView}
  * @author Yaroslav P.
- * {@link AppCompatActivity}
- * {@link SimpleClockView}
  */
 public class SimpleClockActivity extends AppCompatActivity implements SimpleClockView {
 
@@ -33,24 +31,18 @@ public class SimpleClockActivity extends AppCompatActivity implements SimpleCloc
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    /**
-     * Set values to View Pager Adapter
-     * @see SimpleClockView#setPagerAdapter(List, List)
-     * @param fragmentList Fragment value to be added to the list
-     * @param titleList String title value to be added to the list
-     * */
     @Override
     public void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList) {
         TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
         for (int i = 0; i < fragmentList.size(); i++) {
             adapter.addFragment(fragmentList.get(i), titleList.get(i));
         }
-        if (fragmentList.isEmpty()|| titleList.isEmpty()) {
+        /*if (fragmentList.isEmpty()|| titleList.isEmpty()) {
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Your list is Empty ", Toast.LENGTH_SHORT);
             toast.show();
             return;
-        }
+        }*/
         viewPager.setAdapter(adapter);
     }
 }
