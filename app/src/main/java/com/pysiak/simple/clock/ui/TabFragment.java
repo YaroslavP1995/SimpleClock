@@ -9,6 +9,7 @@ import com.pysiak.simple.clock.R;
 
 /**
  * Fragment class
+ *
  * @author Yaroslav P.
  * {@link Fragment}
  */

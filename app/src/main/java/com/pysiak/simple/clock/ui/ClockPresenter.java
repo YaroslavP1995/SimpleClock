@@ -6,32 +6,34 @@ import com.pysiak.simple.clock.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
- * Class for implementing the architecture of the MVP
- * for communicating with SimpleClockActivity
+ * Presenter for my main clock screen with {@link SimpleClockView}
+ *
  * @author Yaroslav P.
  */
-public class ClockPresenter {
+class ClockPresenter {
 
     private SimpleClockView simpleClockView;
     private Context context;
 
-    public ClockPresenter(Context context) {
+    ClockPresenter(Context context) {
         this.context = context;
     }
 
     /**
-     * Method for communicating with SimpleClockActivity through the interface SimpleClockView
-     * @param simpleClockView value for communicating with SimpleClockActivity
+     * Attach instance of {@link SimpleClockView} to presenter
+     *
+     * @param simpleClockView instance of {@link SimpleClockView}
      */
-    public void attachView(SimpleClockView simpleClockView) {
+    void attachView(SimpleClockView simpleClockView) {
         this.simpleClockView = simpleClockView;
     }
 
     /**
      * This is a method for creating new fragments and installed on PagerAdapter
      */
-    public void loadData() {
+    void loadData() {
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> titleList = new ArrayList<>();
 

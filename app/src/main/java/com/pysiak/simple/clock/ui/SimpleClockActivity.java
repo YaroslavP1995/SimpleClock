@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Main class, launcher activity for application, implementation of {@link SimpleClockView}
+ *
  * @author Yaroslav P.
  */
 public class SimpleClockActivity extends AppCompatActivity implements SimpleClockView {

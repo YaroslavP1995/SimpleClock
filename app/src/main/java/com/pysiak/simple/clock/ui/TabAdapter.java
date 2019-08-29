@@ -9,8 +9,8 @@ import java.util.List;
 
 /**
  * Provides fragments and tab titles to view pager associated with tab layout
+ *
  * @author Yaroslav P.
- * Super class for implementation my TabAdapter {@link FragmentStatePagerAdapter}
  */
 public class TabAdapter extends FragmentStatePagerAdapter {
     private final List<Fragment> fragmentList = new ArrayList<>();
@@ -27,6 +27,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
 
     /**
      * A method for creating a list and structure for adding it to a list
+     *
      * @param fragment fragment value to be added to the list
      * @param title String value to be added to the list
      */

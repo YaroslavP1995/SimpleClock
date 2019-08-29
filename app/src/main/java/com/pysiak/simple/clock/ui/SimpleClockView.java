@@ -5,12 +5,17 @@ import android.support.v4.app.Fragment;
 import java.util.List;
 
 /**
- * This is interface for communicating SimpleClockActivity with ClockPresenter
- * Set values to View Pager Adapter
+ * Defines contract for main clock screen.
+ *
  * @author Yaroslav P.
- * param fragmentList Fragment value to be added to the list
- * param titleList String title value to be added to the list
  */
 public interface SimpleClockView {
+
+    /**
+     * Set values to View Pager Adapter
+     *
+     * @param fragmentList list of fragments to be added to the adapter
+     * @param titleList list of titles to be added to the adapter
+     */
     void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList);
 }
