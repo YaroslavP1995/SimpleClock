@@ -40,9 +40,11 @@ class ClockPresenter {
         fragmentList.add(new TabFragment());
         fragmentList.add(new TabFragment());
         fragmentList.add(new TabFragment());
-        titleList.add(context.getString(R.string.tab1));
-        titleList.add(context.getString(R.string.tab2));
-        titleList.add(context.getString(R.string.tab3));
+        fragmentList.add(new TabFragment());
+        titleList.add(context.getString(R.string.Alarm));
+        titleList.add(context.getString(R.string.Stopwatch));
+        titleList.add(context.getString(R.string.Timer));
+        titleList.add(context.getString(R.string.Clock));
 
         if (simpleClockView != null) {
             simpleClockView.setPagerAdapter(fragmentList, titleList);
