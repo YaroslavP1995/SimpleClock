@@ -2,6 +2,7 @@ package com.pysiak.simple.clock.ui;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.widget.Toast;
 import com.pysiak.simple.clock.R;
 
 import java.util.ArrayList;
@@ -42,6 +43,8 @@ public class ClockPresenter {
         titleList.add(context.getString(R.string.tab2));
         titleList.add(context.getString(R.string.tab3));
 
-        simpleClockView.setPagerAdapter(fragmentList, titleList);
+        if (simpleClockView != null) {
+            simpleClockView.setPagerAdapter(fragmentList, titleList);
+        }
     }
 }
