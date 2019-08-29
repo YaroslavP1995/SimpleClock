@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Yaroslav P.
  */
-public class SimpleClockActivity extends AppCompatActivity implements SimpleClockView {
+public class SimpleClockActivity extends AppCompatActivity implements AlarmView,StopWatchView,TimerView,SimpleClockView {
 
     private ViewPager viewPager;
 
@@ -26,9 +26,9 @@ public class SimpleClockActivity extends AppCompatActivity implements SimpleCloc
         setContentView(R.layout.activity_main);
         TabLayout tabLayout = findViewById(R.id.tab_layout_id);
         viewPager = findViewById(R.id.view_pager_id);
-        ClockPresenter presenter = new ClockPresenter(this);
-        presenter.attachView(this);
-        presenter.loadData();
+        ClockPresenter clockPresenter = new ClockPresenter(this);
+        clockPresenter.attachView(this);
+        clockPresenter.loadData();
         tabLayout.setupWithViewPager(viewPager);
     }
 

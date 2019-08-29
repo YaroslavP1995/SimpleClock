@@ -37,14 +37,14 @@ class ClockPresenter {
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> titleList = new ArrayList<>();
 
+        fragmentList.add(new AlarmFragment());
+       /* fragmentList.add(new TabFragment());
         fragmentList.add(new TabFragment());
-        fragmentList.add(new TabFragment());
-        fragmentList.add(new TabFragment());
-        fragmentList.add(new TabFragment());
+        fragmentList.add(new TabFragment());*/
         titleList.add(context.getString(R.string.Alarm));
-        titleList.add(context.getString(R.string.Stopwatch));
+       /* titleList.add(context.getString(R.string.Stopwatch));
         titleList.add(context.getString(R.string.Timer));
-        titleList.add(context.getString(R.string.Clock));
+        titleList.add(context.getString(R.string.Clock));*/
 
         if (simpleClockView != null) {
             simpleClockView.setPagerAdapter(fragmentList, titleList);
