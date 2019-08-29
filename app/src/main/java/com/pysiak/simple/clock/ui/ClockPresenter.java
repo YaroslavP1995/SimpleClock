@@ -2,7 +2,6 @@ package com.pysiak.simple.clock.ui;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
-import android.widget.Toast;
 import com.pysiak.simple.clock.R;
 
 import java.util.ArrayList;

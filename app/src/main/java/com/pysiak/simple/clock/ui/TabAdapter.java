@@ -16,7 +16,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
     private final List<Fragment> fragmentList = new ArrayList<>();
     private final List<String> fragmentTitleList = new ArrayList<>();
 
-    public TabAdapter(FragmentManager fm) {
+    TabAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -30,7 +30,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
      * @param fragment fragment value to be added to the list
      * @param title String value to be added to the list
      */
-    public void addFragment(Fragment fragment, String title) {
+    void addFragment(Fragment fragment, String title) {
         fragmentList.add(fragment);
         fragmentTitleList.add(title);
     }
