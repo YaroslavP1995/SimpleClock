@@ -1,4 +1,4 @@
-package com.pysiak.simple.clock.ui;
+package com.pysiak.simple.clock.ui.clock;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,15 +10,15 @@ import android.view.ViewGroup;
 import com.pysiak.simple.clock.R;
 
 /**
- * StopWatch Fragment
+ * Clock Fragment
  *
  * @author Yaroslav P.
  * {@link Fragment}
  */
-public class StopWatchFragment extends Fragment {
+public class ClockFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.stopwatch_fragment,container,false);
+        return inflater.inflate(R.layout.clock_fragment,container,false);
     }
 }

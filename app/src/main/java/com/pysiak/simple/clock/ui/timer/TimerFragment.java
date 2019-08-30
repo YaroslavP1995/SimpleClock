@@ -1,4 +1,4 @@
-package com.pysiak.simple.clock.ui;
+package com.pysiak.simple.clock.ui.timer;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,15 +10,15 @@ import android.view.ViewGroup;
 import com.pysiak.simple.clock.R;
 
 /**
- * Alarm Fragment
+ * Timer Fragment
  *
  * @author Yaroslav P.
  * {@link Fragment}
  */
-public class AlarmFragment extends Fragment {
+public class TimerFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.alarm_fragment,container,false);
+        return inflater.inflate(R.layout.timer_fragment,container,false);
     }
 }

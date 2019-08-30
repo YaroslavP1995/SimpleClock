@@ -1,15 +1,15 @@
-package com.pysiak.simple.clock.ui;
+package com.pysiak.simple.clock.ui.stopwatch;
 
 import android.support.v4.app.Fragment;
 
 import java.util.List;
 
 /**
- * Defines contract for main clock screen.
+ * Defines contract for main StopWatch screen.
  *
  * @author Yaroslav P.
  */
-public interface SimpleClockView {
+public interface StopWatchView {
 
     /**
      * Set values to View Pager Adapter
