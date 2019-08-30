@@ -8,21 +8,14 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 import com.pysiak.simple.clock.R;
-import com.pysiak.simple.clock.ui.alarm.AlarmPresenter;
-import com.pysiak.simple.clock.ui.alarm.AlarmView;
-import com.pysiak.simple.clock.ui.clock.ClockPresenter;
-import com.pysiak.simple.clock.ui.clock.ClockView;
-import com.pysiak.simple.clock.ui.stopwatch.StopWatchView;
-import com.pysiak.simple.clock.ui.timer.TimerView;
-
 import java.util.List;
 
 /**
- * Main class, launcher activity for application, implementation of {@link ClockView}
+ * Main class, launcher activity for application, implementation of {@link SimpleClockView}
  *
  * @author Yaroslav P.
  */
-public class ClockActivity extends AppCompatActivity implements AlarmView, ClockView, StopWatchView, TimerView {
+public class SimpleClockActivity extends AppCompatActivity implements SimpleClockView {
 
     private ViewPager viewPager;
 
@@ -32,12 +25,9 @@ public class ClockActivity extends AppCompatActivity implements AlarmView, Clock
         setContentView(R.layout.activity_main);
         TabLayout tabLayout = findViewById(R.id.tab_layout_id);
         viewPager = findViewById(R.id.view_pager_id);
-        AlarmPresenter alarmPresenter = new AlarmPresenter(this);
-        alarmPresenter.attachView(this);
-        alarmPresenter.loadData();
-        ClockPresenter clockPresenter = new ClockPresenter(this);
-        clockPresenter.attachView(this);
-        clockPresenter.loadData();
+        SimpleClockPresenter simpleclockPresenter = new SimpleClockPresenter(this);
+        simpleclockPresenter.attachView(this);
+        simpleclockPresenter.loadData();
         tabLayout.setupWithViewPager(viewPager);
     }
 

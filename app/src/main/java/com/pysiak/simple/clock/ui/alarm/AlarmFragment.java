@@ -10,15 +10,22 @@ import android.view.ViewGroup;
 import com.pysiak.simple.clock.R;
 
 /**
- * Alarm Fragment
+ * Alarm Fragment implementation {@link AlarmView}
  *
  * @author Yaroslav P.
  * {@link Fragment}
  */
-public class AlarmFragment extends Fragment {
+public class AlarmFragment extends Fragment implements AlarmView{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.alarm_fragment,container,false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        AlarmPresenter alarmPresenter = new AlarmPresenter(this);
+        alarmPresenter.attachView(this);
+        super.onViewCreated(view, savedInstanceState);
     }
 }

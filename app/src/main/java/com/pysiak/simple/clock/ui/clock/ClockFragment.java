@@ -10,15 +10,22 @@ import android.view.ViewGroup;
 import com.pysiak.simple.clock.R;
 
 /**
- * Clock Fragment
+ * Clock Fragment implementation {@link ClockView}
  *
  * @author Yaroslav P.
  * {@link Fragment}
  */
-public class ClockFragment extends Fragment {
+public class ClockFragment extends Fragment implements ClockView {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.clock_fragment,container,false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        ClockPresenter clockPresenter = new ClockPresenter(this);
+        clockPresenter.attachView(this);
+        super.onViewCreated(view, savedInstanceState);
     }
 }
