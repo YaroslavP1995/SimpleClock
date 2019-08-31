@@ -1,17 +1,15 @@
 package com.pysiak.simple.clock.ui.timer;
 
 /**
- * Presenter for my Timer fragment with {@link TimerView}
+ * Presenter for timer screen.
  *
  * @author Yaroslav P.
  */
 public class TimerPresenter {
 
     private TimerView timerView;
-    private TimerFragment timerFragment;
 
-    TimerPresenter(TimerFragment timerFragment) {
-        this.timerFragment = timerFragment;
+    TimerPresenter() {
     }
 
     /**

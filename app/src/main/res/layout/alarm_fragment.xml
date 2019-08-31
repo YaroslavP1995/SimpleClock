@@ -7,7 +7,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/Alarm"
+            android:text="@string/alarm_tab_title"
             android:textSize="36sp" />
 
 </RelativeLayout>

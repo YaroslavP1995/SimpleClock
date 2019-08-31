@@ -1,17 +1,15 @@
 package com.pysiak.simple.clock.ui.stopwatch;
 
 /**
- * Presenter for my StopWatch fragment with {@link StopWatchView}
+ * Presenter for stopwatch screen.
  *
  * @author Yaroslav P.
  */
 public class StopWatchPresenter {
 
     private StopWatchView stopWatchView;
-    private StopWatchFragment stopWatchFragment;
 
-    StopWatchPresenter(StopWatchFragment stopWatchFragment) {
-        this.stopWatchFragment = stopWatchFragment;
+    StopWatchPresenter() {
     }
 
     /**

@@ -1,17 +1,15 @@
 package com.pysiak.simple.clock.ui.clock;
 
 /**
- * Presenter for my Alarm fragment with {@link ClockView}
+ * Presenter for clock screen.
  *
  * @author Yaroslav P.
  */
 public class ClockPresenter {
 
     private ClockView clockView;
-    private ClockFragment clockFragment;
 
-    ClockPresenter(ClockFragment clockFragment) {
-        this.clockFragment = clockFragment;
+    ClockPresenter() {
     }
 
     /**

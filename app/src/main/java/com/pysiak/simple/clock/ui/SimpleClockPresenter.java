@@ -45,10 +45,10 @@ public class SimpleClockPresenter {
         fragmentList.add(new ClockFragment());
         fragmentList.add(new StopWatchFragment());
         fragmentList.add(new TimerFragment());
-        titleList.add(context.getString(R.string.Alarm));
-        titleList.add(context.getString(R.string.Clock));
-        titleList.add(context.getString(R.string.Stopwatch));
-        titleList.add(context.getString(R.string.Timer));
+        titleList.add(context.getString(R.string.alarm_tab_title));
+        titleList.add(context.getString(R.string.clock_tab_title));
+        titleList.add(context.getString(R.string.stopwatch_tab_title));
+        titleList.add(context.getString(R.string.timer_tab_title));
 
         if (simpleClockView != null) {
             simpleClockView.setPagerAdapter(fragmentList, titleList);

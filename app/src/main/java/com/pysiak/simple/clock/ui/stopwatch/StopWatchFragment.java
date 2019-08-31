@@ -10,22 +10,21 @@ import android.view.ViewGroup;
 import com.pysiak.simple.clock.R;
 
 /**
- * StopWatch Fragment implementation {@link StopWatchView}
+ * Fragment that implements {@link StopWatchView}
  *
  * @author Yaroslav P.
- * {@link Fragment}
  */
-public class StopWatchFragment extends Fragment implements StopWatchView{
+public class StopWatchFragment extends Fragment implements StopWatchView {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.stopwatch_fragment,container,false);
+        return inflater.inflate(R.layout.stopwatch_fragment, container,false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        StopWatchPresenter stopWatchPresenter = new StopWatchPresenter(this);
-        stopWatchPresenter.attachView(this);
         super.onViewCreated(view, savedInstanceState);
+        StopWatchPresenter stopWatchPresenter = new StopWatchPresenter();
+        stopWatchPresenter.attachView(this);
     }
 }

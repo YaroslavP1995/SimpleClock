@@ -1,10 +1,9 @@
 package com.pysiak.simple.clock.ui.timer;
 
 /**
- * Defines contract for fragment Timer.
+ * Defines contract for timer tab.
  *
  * @author Yaroslav P.
  */
 interface TimerView {
-
 }
