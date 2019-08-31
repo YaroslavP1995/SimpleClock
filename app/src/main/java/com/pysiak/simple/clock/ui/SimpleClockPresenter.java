@@ -3,6 +3,10 @@ package com.pysiak.simple.clock.ui;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import com.pysiak.simple.clock.R;
+import com.pysiak.simple.clock.ui.alarm.AlarmFragment;
+import com.pysiak.simple.clock.ui.clock.ClockFragment;
+import com.pysiak.simple.clock.ui.stopwatch.StopWatchFragment;
+import com.pysiak.simple.clock.ui.timer.TimerFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +16,12 @@ import java.util.List;
  *
  * @author Yaroslav P.
  */
-class ClockPresenter {
+public class SimpleClockPresenter {
 
     private SimpleClockView simpleClockView;
     private Context context;
 
-    ClockPresenter(Context context) {
+   SimpleClockPresenter(Context context) {
         this.context = context;
     }
 
@@ -26,7 +30,7 @@ class ClockPresenter {
      *
      * @param simpleClockView instance of {@link SimpleClockView}
      */
-    void attachView(SimpleClockView simpleClockView) {
+  public void attachView(SimpleClockView simpleClockView) {
         this.simpleClockView = simpleClockView;
     }
 
@@ -37,12 +41,14 @@ class ClockPresenter {
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> titleList = new ArrayList<>();
 
-        fragmentList.add(new TabFragment());
-        fragmentList.add(new TabFragment());
-        fragmentList.add(new TabFragment());
-        titleList.add(context.getString(R.string.tab1));
-        titleList.add(context.getString(R.string.tab2));
-        titleList.add(context.getString(R.string.tab3));
+        fragmentList.add(new AlarmFragment());
+        fragmentList.add(new ClockFragment());
+        fragmentList.add(new StopWatchFragment());
+        fragmentList.add(new TimerFragment());
+        titleList.add(context.getString(R.string.alarm_tab_title));
+        titleList.add(context.getString(R.string.clock_tab_title));
+        titleList.add(context.getString(R.string.stopwatch_tab_title));
+        titleList.add(context.getString(R.string.timer_tab_title));
 
         if (simpleClockView != null) {
             simpleClockView.setPagerAdapter(fragmentList, titleList);

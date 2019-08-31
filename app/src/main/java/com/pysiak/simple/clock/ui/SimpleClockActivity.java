@@ -8,7 +8,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 import com.pysiak.simple.clock.R;
-
 import java.util.List;
 
 /**
@@ -26,9 +25,9 @@ public class SimpleClockActivity extends AppCompatActivity implements SimpleCloc
         setContentView(R.layout.activity_main);
         TabLayout tabLayout = findViewById(R.id.tab_layout_id);
         viewPager = findViewById(R.id.view_pager_id);
-        ClockPresenter presenter = new ClockPresenter(this);
-        presenter.attachView(this);
-        presenter.loadData();
+        SimpleClockPresenter simpleclockPresenter = new SimpleClockPresenter(this);
+        simpleclockPresenter.attachView(this);
+        simpleclockPresenter.loadData();
         tabLayout.setupWithViewPager(viewPager);
     }
 

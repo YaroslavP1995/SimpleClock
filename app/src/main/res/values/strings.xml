@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Clock</string>
-    <string name="tab1">Tab1</string>
-    <string name="tab2">Tab2</string>
-    <string name="tab3">Tab3</string>
+    <string name="alarm_tab_title">alarm</string>
+    <string name="stopwatch_tab_title">stopwatch</string>
+    <string name="timer_tab_title">timer</string>
+    <string name="clock_tab_title">clock</string>
 </resources>
