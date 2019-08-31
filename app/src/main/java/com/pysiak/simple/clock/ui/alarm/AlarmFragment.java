@@ -18,7 +18,7 @@ public class AlarmFragment extends Fragment implements AlarmView {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.alarm_fragment, container,false);
+        return inflater.inflate(R.layout.alarm_fragment, container, false);
     }
 
     @Override

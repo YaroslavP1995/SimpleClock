@@ -1,7 +1,7 @@
 package com.pysiak.simple.clock.ui.clock;
 
 /**
- * Presenter for clock screen.
+ * Presenter for clock tab.
  *
  * @author Yaroslav P.
  */

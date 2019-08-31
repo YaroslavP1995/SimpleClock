@@ -18,7 +18,7 @@ public class StopWatchFragment extends Fragment implements StopWatchView {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.stopwatch_fragment, container,false);
+        return inflater.inflate(R.layout.stopwatch_fragment, container, false);
     }
 
     @Override

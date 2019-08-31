@@ -18,7 +18,7 @@ public class ClockFragment extends Fragment implements ClockView {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.clock_fragment, container,false);
+        return inflater.inflate(R.layout.clock_fragment, container, false);
     }
 
     @Override

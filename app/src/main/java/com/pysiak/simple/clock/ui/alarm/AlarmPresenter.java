@@ -1,7 +1,7 @@
 package com.pysiak.simple.clock.ui.alarm;
 
 /**
- * Presenter for alarm screen.
+ * Presenter for alarm tab.
  *
  * @author Yaroslav P.
  */

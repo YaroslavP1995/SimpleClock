@@ -1,7 +1,7 @@
 package com.pysiak.simple.clock.ui.timer;
 
 /**
- * Presenter for timer screen.
+ * Presenter for timer tab.
  *
  * @author Yaroslav P.
  */

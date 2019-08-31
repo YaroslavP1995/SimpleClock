@@ -1,7 +1,7 @@
 package com.pysiak.simple.clock.ui.stopwatch;
 
 /**
- * Presenter for stopwatch screen.
+ * Presenter for stopwatch tab.
  *
  * @author Yaroslav P.
  */
