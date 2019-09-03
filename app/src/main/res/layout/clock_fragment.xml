@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-    <TextView
-            android:id="@+id/clock_text_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/clock_tab_title"
-            android:textSize="36sp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
 
-</RelativeLayout>
+    <TextClock
+            android:id="@+id/text_time_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour="@string/clock_format_time_12_hour"
+            android:format24Hour="@string/clock_format_time_24_hour"
+            android:textSize="@dimen/clock_text_time_size"
+            android:textColor="@color/primaryViewColor"
+            android:gravity="center_horizontal"/>
+
+    <TextClock
+            android:id="@+id/text_date_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:format12Hour="@string/clock_format_date_12_hour"
+            android:format24Hour="@string/clock_format_date_24_hour"
+            android:textSize="@dimen/clock_text_date_size"
+            android:textColor="@color/secondaryViewColor"
+            android:gravity="center_horizontal"/>
+
+</LinearLayout>
