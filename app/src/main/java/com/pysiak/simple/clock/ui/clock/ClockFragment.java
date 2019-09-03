@@ -7,12 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextClock;
-import android.widget.TextView;
 import com.pysiak.simple.clock.R;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Fragment that implements {@link ClockView}
@@ -24,7 +19,6 @@ public class ClockFragment extends Fragment implements ClockView {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.clock_fragment, container, false);
-
     }
 
     @Override
@@ -32,6 +26,5 @@ public class ClockFragment extends Fragment implements ClockView {
         super.onViewCreated(view, savedInstanceState);
         ClockPresenter clockPresenter = new ClockPresenter();
         clockPresenter.attachView(this);
-
     }
 }
