@@ -34,14 +34,16 @@ public class SimpleClockActivity extends AppCompatActivity implements SimpleCloc
 
     @Override
     public void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList, List<Integer> iconList) {
-        if (fragmentList != null && titleList != null && iconList != null && fragmentList.size() == titleList.size()) {
+        if (fragmentList != null && titleList != null && fragmentList.size() == titleList.size()) {
             TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
             for (int i = 0; i < fragmentList.size(); i++) {
                 adapter.addFragment(fragmentList.get(i), titleList.get(i));
             }
             viewPager.setAdapter(adapter);
-            for (int j = 0; j < iconList.size(); j++){
-                tabLayout.getTabAt(j).setIcon(iconList.get(j));
+            if (iconList != null && tabLayout.getTabCount() == iconList.size()) {
+                for (int j = 0; j < iconList.size(); j++){
+                    tabLayout.getTabAt(j).setIcon(iconList.get(j));
+                }
             }
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), "Check your list size", Toast.LENGTH_SHORT);

@@ -20,7 +20,6 @@ public class SimpleClockPresenter {
 
     private SimpleClockView simpleClockView;
     private Context context;
-
     SimpleClockPresenter(Context context) {
         this.context = context;
     }
