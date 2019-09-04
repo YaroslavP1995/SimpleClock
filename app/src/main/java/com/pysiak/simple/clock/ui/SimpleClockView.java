@@ -16,6 +16,7 @@ public interface SimpleClockView {
      *
      * @param fragmentList list of fragments to be added to the adapter
      * @param titleList list of titles to be added to the adapter
+     * @param iconList list of icons to be added to the tab layout
      */
-    void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList);
+    void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList, List<Integer> iconList);
 }

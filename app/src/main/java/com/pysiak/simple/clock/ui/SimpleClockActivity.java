@@ -18,27 +18,31 @@ import java.util.List;
 public class SimpleClockActivity extends AppCompatActivity implements SimpleClockView {
 
     private ViewPager viewPager;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TabLayout tabLayout = findViewById(R.id.tab_layout_id);
+        tabLayout = findViewById(R.id.tab_layout_id);
         viewPager = findViewById(R.id.view_pager_id);
+        tabLayout.setupWithViewPager(viewPager);
         SimpleClockPresenter simpleclockPresenter = new SimpleClockPresenter(this);
         simpleclockPresenter.attachView(this);
         simpleclockPresenter.loadData();
-        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
-    public void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList) {
-        if (fragmentList != null && titleList != null && fragmentList.size() == titleList.size()) {
+    public void setPagerAdapter(List<Fragment> fragmentList, List<String> titleList, List<Integer> iconList) {
+        if (fragmentList != null && titleList != null && iconList != null && fragmentList.size() == titleList.size()) {
             TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
             for (int i = 0; i < fragmentList.size(); i++) {
                 adapter.addFragment(fragmentList.get(i), titleList.get(i));
             }
             viewPager.setAdapter(adapter);
+            for (int j = 0; j < iconList.size(); j++){
+                tabLayout.getTabAt(j).setIcon(iconList.get(j));
+            }
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), "Check your list size", Toast.LENGTH_SHORT);
             toast.show();
