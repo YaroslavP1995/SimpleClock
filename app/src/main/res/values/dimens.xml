@@ -2,4 +2,5 @@
 <resources>
     <dimen name="clock_text_time_size">50sp</dimen>
     <dimen name="clock_text_date_size">20sp</dimen>
+    <dimen name="indicator_height_size">4dp</dimen>
 </resources>

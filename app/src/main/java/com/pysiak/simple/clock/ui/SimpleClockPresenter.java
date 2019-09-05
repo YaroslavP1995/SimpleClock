@@ -20,8 +20,7 @@ public class SimpleClockPresenter {
 
     private SimpleClockView simpleClockView;
     private Context context;
-
-   SimpleClockPresenter(Context context) {
+    SimpleClockPresenter(Context context) {
         this.context = context;
     }
 
@@ -40,6 +39,7 @@ public class SimpleClockPresenter {
     void loadData() {
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> titleList = new ArrayList<>();
+        List<Integer> iconList = new ArrayList<>();
 
         fragmentList.add(new AlarmFragment());
         fragmentList.add(new ClockFragment());
@@ -49,9 +49,13 @@ public class SimpleClockPresenter {
         titleList.add(context.getString(R.string.clock_tab_title));
         titleList.add(context.getString(R.string.stopwatch_tab_title));
         titleList.add(context.getString(R.string.timer_tab_title));
+        iconList.add(R.drawable.ic_alarm_clock_48);
+        iconList.add(R.drawable.ic_clock_48);
+        iconList.add(R.drawable.ic_stopwatch_48);
+        iconList.add(R.drawable.ic_timer_48);
 
         if (simpleClockView != null) {
-            simpleClockView.setPagerAdapter(fragmentList, titleList);
+            simpleClockView.setPagerAdapter(fragmentList, titleList, iconList);
         }
     }
 }
