@@ -8,4 +8,5 @@
     <string name="clock_format_time_24_hour">HH:mm:ss</string>
     <string name="clock_format_date_12_hour">EEE, d MMM</string>
     <string name="clock_format_date_24_hour">EEE, d MMM</string>
+    <string name="search">search</string>
 </resources>
