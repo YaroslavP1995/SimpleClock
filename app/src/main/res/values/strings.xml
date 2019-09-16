@@ -9,5 +9,4 @@
     <string name="clock_format_date_12_hour">EEE, d MMM</string>
     <string name="clock_format_date_24_hour">EEE, d MMM</string>
     <string name="search">search</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAvjuyNylX6SMSVHVKCAivCGnCSF9U7RjI</string>
 </resources>

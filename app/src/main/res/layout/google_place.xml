@@ -2,28 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" tools:ignore="UselessParent">
 
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <fragment android:id="@+id/autocomplete_fragment_id"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment">
-
-            </fragment>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_search_id"
                     android:text=""
             />
-
-        </LinearLayout>
-
-    </ScrollView>
 
 </RelativeLayout>
