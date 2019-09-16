@@ -9,4 +9,5 @@
     <string name="clock_format_date_12_hour">EEE, d MMM</string>
     <string name="clock_format_date_24_hour">EEE, d MMM</string>
     <string name="search">search</string>
+    <string name="map_box_key">pk.eyJ1IjoieWFyb3NsYXY0NDQ0IiwiYSI6ImNrMGlhem4wMDBhZWYzb3A1bnpqeHA4ZHIifQ.Fop-TkLfIdeCN-jwyTNYZA</string>
 </resources>

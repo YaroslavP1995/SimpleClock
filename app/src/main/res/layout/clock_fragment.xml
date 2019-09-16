@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" >
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TextClock
             android:id="@+id/text_time_id"
@@ -26,11 +27,12 @@
 
     <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="300dp"
             android:background="@color/whiteViewColor"
-            android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_location_48"
-            android:id="@+id/search_location"
-            android:contentDescription="@string/search"/>
+            android:id="@+id/fab_location_search"
+            android:contentDescription="@string/search"
+            android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
