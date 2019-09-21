@@ -1,7 +1,7 @@
 package com.pysiak.simple.clock.ui;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import com.pysiak.simple.clock.R;
 import com.pysiak.simple.clock.ui.alarm.AlarmFragment;
 import com.pysiak.simple.clock.ui.clock.ClockFragment;
